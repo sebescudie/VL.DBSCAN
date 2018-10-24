@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="GB2VxUl5VdhM5rsl5IbjQg" Version="0.93">
+  <NugetDependency Id="RKFCmk1Lg5EP3I4IQegLTw" Location="VL.CoreLib" Version="0.35.21" />
+  <NugetDependency Id="U2JwHqMJLyGLDs97lM6eZ6" Location="VL.CoreLib.VVVV" Version="0.35.21" />
+  <Patch Id="Th8hpfHvBF4Lk6VOwDCc9D">
+    <Canvas Id="NtZT52Xp5qNOXK0fF2H7kv" DefaultCategory="2D" CanvasType="FullCategory">
+      <!--
+
+    ************************ DBSCAN ************************
+
+-->
+      <Node Name="DBSCAN" Bounds="280,223" Id="Ucw4eqJKxlTNBuGzQTNppf">
+        <p:NodeReference>
+          <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+          <FullNameCategoryReference ID="Primitive" />
+        </p:NodeReference>
+        <p:TypeAnnotation LastCategoryFullName="DBSCAN" LastSymbolSource="DBSCAN.dll">
+          <Choice Kind="TypeFlag" Name="DBSCAN" />
+        </p:TypeAnnotation>
+        <p:ForwardAllNodesOfTypeDefinition p:Type="Boolean">false</p:ForwardAllNodesOfTypeDefinition>
+        <Patch Id="D6IFg4kXAA4MdBDDOajgNw">
+          <Canvas Id="A6RWBS4FNbxOvTue93Ok7A" CanvasType="Group">
+            <!--
+
+    ************************ CalculateClusters ************************
+
+-->
+            <Node Name="CalculateClusters" Bounds="405,251,287,625" Id="P58XXP1zvSRNfCnphqzmRX" Summary="Finds clusters in a spread of 2D vectors" Remarks="VL wrapper for viceroypenguin's DBSCAN library" Tags="tracking,cluster">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <FullNameCategoryReference ID="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">true</p:HideCategory>
+              <Patch Id="S4Bp6ZHTh55PuHEbLf5n0K" IsGeneric="true" ManuallySortedPins="true">
+                <Node Bounds="473,453,161,20" AutoConnect="true" Id="GhThwmtinEzNVJIt3RSHGa">
+                  <p:NodeReference LastCategoryFullName="DBSCAN.DBSCAN" LastSymbolSource="DBSCAN.dll">
+                    <Choice Kind="OperationNode" Name="CalculateClusters" />
+                    <FullNameCategoryReference ID="DBSCAN.DBSCAN" />
+                    <PinReference Kind="InputPin" Name="Data" />
+                  </p:NodeReference>
+                  <Pin Id="Hqt5kDe5MovLAQ8DujLiJF" Name="Data" Kind="InputPin" />
+                  <Pin Id="F4lDr2Jy7osPZHOoAvz6zO" Name="Epsilon" Kind="InputPin" />
+                  <Pin Id="Um3XhqQ7aZoMpZfmbuxk0T" Name="Minimum Points Per Cluster" Kind="InputPin" />
+                  <Pin Id="EwXATw75LGHMhIGcbKgJ5K" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="461,293,91,79" Id="ALmSeNdAW2nLIGJcQpcL6D">
+                  <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                    <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                    <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
+                    <CategoryReference Kind="Category" Name="Primitive" />
+                  </p:NodeReference>
+                  <Pin Id="SE7iRNOrqi0NT9784HMcLS" Name="Break" Kind="OutputPin" />
+                  <Patch Id="PqJRH801W8LOQsjGXPZmQP" ManuallySortedPins="true">
+                    <Patch Id="KkgZgb3smOUMNxBikUPlYI" Name="Create" ManuallySortedPins="true" />
+                    <Patch Id="GYI9Ku6Qs6qMvaYW4S0NZR" Name="Update" ManuallySortedPins="true" />
+                    <Patch Id="BUARZGq3J6xLQRXcjH6goC" Name="Dispose" ManuallySortedPins="true" />
+                    <Node Bounds="478,319,62,22" Id="Qf9EzYBuZ70M5MxflnsAVf">
+                      <p:NodeReference LastCategoryFullName="DBSCAN.Utils.TrackablePoint" LastSymbolSource="DBSCAN.Utils.dll">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <CategoryReference Kind="AssemblyCategory" Name="TrackablePoint" />
+                        <Choice Kind="OperationCallFlag" Name="Create" />
+                      </p:NodeReference>
+                      <Pin Id="IS57SBom9hoMRfnGqX0ylM" Name="Vector" Kind="InputPin" />
+                      <Pin Id="Hf8yCqY3K2GOXtol4dCF4Q" Name="Output" Kind="StateOutputPin" />
+                    </Node>
+                  </Patch>
+                  <ControlPoint Id="QJmygGBkMk0MvhTclcHdxn" Bounds="477,299" Alignment="Top" />
+                  <ControlPoint Id="QPvlXnY9PpqPVEKIWJHrvA" Bounds="476,366" Alignment="Bottom" />
+                </Node>
+                <ControlPoint Id="RiCuwiUq0PsN9HNE6ovag6" Bounds="476,267" />
+                <Link Id="LEFusO9QJ8OLtSxyXFGiQF" Ids="RiCuwiUq0PsN9HNE6ovag6,QJmygGBkMk0MvhTclcHdxn" />
+                <Link Id="VTHacAd8RVFPUndP0HSXHz" Ids="Jo71IxB5i6JNr7eNNvp22Y,RiCuwiUq0PsN9HNE6ovag6" IsHidden="true" />
+                <Link Id="EEgGzRuIFD3POtrHpY758u" Ids="Hf8yCqY3K2GOXtol4dCF4Q,QPvlXnY9PpqPVEKIWJHrvA" />
+                <Node Bounds="473,396,50,22" Id="KW1ybieeWznOdddDPKkjzs">
+                  <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableList" LastSymbolSource="VL.Collections.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="ClassType" Name="MutableList" />
+                    <Choice Kind="OperationCallFlag" Name="Create" />
+                    <PinReference Kind="InputPin" Name="Collection" />
+                  </p:NodeReference>
+                  <Pin Id="DePEnwuNmSjMmNkVcedxZD" Name="Collection" Kind="InputPin" />
+                  <Pin Id="QlbCM87wIB5LFi6FjQOLzS" Name="Output" Kind="StateOutputPin" />
+                </Node>
+                <Link Id="Vm5OgljLqrBNbPtuDTUxSv" Ids="QPvlXnY9PpqPVEKIWJHrvA,DePEnwuNmSjMmNkVcedxZD" />
+                <Link Id="Q1RHp9m4JvJLKGYd5DfUTk" Ids="QlbCM87wIB5LFi6FjQOLzS,Hqt5kDe5MovLAQ8DujLiJF" />
+                <Link Id="V1RBBuMCACfNISesQl17Fm" Ids="QJmygGBkMk0MvhTclcHdxn,IS57SBom9hoMRfnGqX0ylM" />
+                <Pin Id="Jo71IxB5i6JNr7eNNvp22Y" Comment="A spread of Vector2 points" Name="Input" Kind="InputPin">
+                  <p:TypeAnnotation>
+                    <Choice Kind="TypeFlag" Name="Spread" />
+                    <p:TypeArguments>
+                      <TypeReference>
+                        <Choice Kind="TypeFlag" Name="Vector2" />
+                      </TypeReference>
+                    </p:TypeArguments>
+                  </p:TypeAnnotation>
+                </Pin>
+                <Pin Id="BuR5YdhpFjWOCev5UQJhYi" Comment="Specifices how close points should be to each other to be considered part of cluster" Name="Epsilon" Kind="InputPin" Bounds="43,4" />
+                <Pin Id="MONw8AMzuWMQB60E63YI1B" Comment="Specifies the minimum number of points a cluster should have" Name="Minimum Points Per Cluster" Kind="InputPin" Bounds="91,4" />
+                <Node Bounds="473,501,55,22" Id="BsoHQq4KdvGOVJwYlg51lN">
+                  <p:NodeReference LastCategoryFullName="DBSCAN.ClusterSet`1" LastSymbolSource="DBSCAN.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="OperationCallFlag" Name="Clusters" />
+                  </p:NodeReference>
+                  <Pin Id="EXYRNmAJBWxNGIwPSPk7zv" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="BS0zNG2MtSyLkjTA5O9xwg" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="JrODQDM90nMOtSSJLl2lFH" Name="Clusters" Kind="OutputPin" />
+                </Node>
+                <Link Id="RphFJyzV5aSNfpKkQxf9jw" Ids="EwXATw75LGHMhIGcbKgJ5K,EXYRNmAJBWxNGIwPSPk7zv" />
+                <Node Bounds="495,556,184,266" Id="L07TpTI8SIVLHJ6EXvc922">
+                  <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                    <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                    <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
+                    <CategoryReference Kind="Category" Name="Primitive" />
+                  </p:NodeReference>
+                  <Pin Id="TB4OTsiwybPM7tvDdCilmn" Name="Break" Kind="OutputPin" />
+                  <Patch Id="Hv7A9BlSxO8PZUX7iuWBxB" ManuallySortedPins="true">
+                    <Patch Id="DCpYeBL38AEMX7v1QHnJU5" Name="Create" ManuallySortedPins="true" />
+                    <Patch Id="RSQy9m6fo3qMt3vrxmF3vI" Name="Update" ManuallySortedPins="true" />
+                    <Patch Id="Q6vqh4BYb7AP78gTFCmdyZ" Name="Dispose" ManuallySortedPins="true" />
+                    <Node Bounds="524,592,44,22" Id="OBTeZ2SLHtEO3K0VFf3r22">
+                      <p:NodeReference LastCategoryFullName="DBSCAN.Cluster`1" LastSymbolSource="DBSCAN.dll">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <Choice Kind="OperationCallFlag" Name="Objects" />
+                      </p:NodeReference>
+                      <Pin Id="CL5F7h7kQebNR3IxEe3XeU" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="I2taGVgytV0QNQmAfuOd1J" Name="Output" Kind="StateOutputPin" />
+                      <Pin Id="CKmkF2hYvsNNOEgDeIywrT" Name="Objects" Kind="OutputPin" />
+                    </Node>
+                    <Node Bounds="551,650,93,93" Id="MtyIDi7uwToMDFPc5fWtam">
+                      <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                        <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                        <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
+                        <CategoryReference Kind="Category" Name="Primitive" />
+                      </p:NodeReference>
+                      <Pin Id="Nd3EZSnVwTlOROo5mSuSQl" Name="Break" Kind="OutputPin" />
+                      <Patch Id="TEazLAodDFrPs1V9OpDaRg" ManuallySortedPins="true">
+                        <Patch Id="CdeYKfNXEGJMabruquKzF4" Name="Create" ManuallySortedPins="true" />
+                        <Patch Id="Abb1m00x8lmPxFhmtfhtM2" Name="Update" ManuallySortedPins="true" />
+                        <Patch Id="Lvv9Cd7xMndPJeM4FjWmMt" Name="Dispose" ManuallySortedPins="true" />
+                        <Node Bounds="576,698,57,13" Id="JpCtszIMEpMMLTErYNnsBJ">
+                          <p:NodeReference LastCategoryFullName="DBSCAN.Utils.TrackablePoint" LastSymbolSource="DBSCAN.Utils.dll">
+                            <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                            <Choice Kind="OperationCallFlag" Name="ToVector2" />
+                            <CategoryReference Kind="AssemblyCategory" Name="TrackablePoint" NeedsToBeDirectParent="true" />
+                          </p:NodeReference>
+                          <Pin Id="O7wE931DKKVM0NTLjlc19g" Name="Point" Kind="InputPin" />
+                          <Pin Id="JgSfvL1aj3HMfOaaxwPpvp" Name="Result" Kind="OutputPin" />
+                        </Node>
+                      </Patch>
+                      <ControlPoint Id="CC0FE51cCm9LzyTVG98iD2" Bounds="566,656" Name="Point" Alignment="Top" />
+                      <ControlPoint Id="KCAjujtwrbaLC2vmDTJAIt" Bounds="579,737" Alignment="Bottom" />
+                    </Node>
+                    <Node Bounds="576,765,55,22" Id="OLerBKys36fMAyH5m7fwMA">
+                      <p:NodeReference LastCategoryFullName="2D.Cluster" LastSymbolSource="VVVV.DBSCAN.Root.vl">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <CategoryReference Kind="ClassType" Name="Cluster" />
+                        <Choice Kind="OperationCallFlag" Name="Create" />
+                      </p:NodeReference>
+                      <Pin Id="LjXG2ZsQ9bnPMlZ8S13xGD" Name="Points" Kind="InputPin" />
+                      <Pin Id="B5W2excPCvxMFxtxYQE3J3" Name="Output" Kind="StateOutputPin" />
+                    </Node>
+                  </Patch>
+                  <ControlPoint Id="LyTH2IBEBJlP3il8Oi1xwE" Bounds="526,562" Name="Cluster" Alignment="Top" />
+                  <ControlPoint Id="KgDP9fs3Rp1NrxYHbd3TPq" Bounds="578,816" Alignment="Bottom" />
+                </Node>
+                <Link Id="U22DWLHI2KuO1RZQr6nOcf" Ids="JrODQDM90nMOtSSJLl2lFH,LyTH2IBEBJlP3il8Oi1xwE" />
+                <Link Id="CyOn3zxWXwHPhqMwneowOW" Ids="LyTH2IBEBJlP3il8Oi1xwE,CL5F7h7kQebNR3IxEe3XeU" />
+                <Link Id="TuCaA4AYFMRNNXUzGCf3mI" Ids="CKmkF2hYvsNNOEgDeIywrT,CC0FE51cCm9LzyTVG98iD2" />
+                <Link Id="PGxHnmJ5T8pL4t8Chc4eIJ" Ids="KCAjujtwrbaLC2vmDTJAIt,LjXG2ZsQ9bnPMlZ8S13xGD" />
+                <Link Id="BOHOMTyMsFGOOdxvD1H9h5" Ids="B5W2excPCvxMFxtxYQE3J3,KgDP9fs3Rp1NrxYHbd3TPq" />
+                <Link Id="Biz6FWRU63gMzuIQCmA6Z3" Ids="KgDP9fs3Rp1NrxYHbd3TPq,DE6QqTI9bdcPLccG6UVvyL" />
+                <ControlPoint Id="DE6QqTI9bdcPLccG6UVvyL" Bounds="577,857" />
+                <Pin Id="StGnN9z9ztyLUnkFe89NCy" Comment="A spread of Cluster objects" Name="Result" Kind="OutputPin" Bounds="584,857" />
+                <Link Id="OH4Tb0ErhhjLpJhBJnS4xi" Ids="DE6QqTI9bdcPLccG6UVvyL,StGnN9z9ztyLUnkFe89NCy" IsHidden="true" />
+                <Link Id="RQxrCHL4BA4Mo2Fs7cM7rh" Ids="CC0FE51cCm9LzyTVG98iD2,O7wE931DKKVM0NTLjlc19g" />
+                <Link Id="HrSGWzKLeWZOZHc5mkI9iU" Ids="JgSfvL1aj3HMfOaaxwPpvp,KCAjujtwrbaLC2vmDTJAIt" />
+              </Patch>
+            </Node>
+          </Canvas>
+          <ProcessDefinition Id="Tl3Qh0rhF48MeeByhTVvAe" IsHidden="true">
+            <Fragment Id="K80PahOSVoUMO6ob9z93fh" Patch="P58XXP1zvSRNfCnphqzmRX" />
+          </ProcessDefinition>
+        </Patch>
+      </Node>
+      <!--
+
+    ************************ Cluster ************************
+
+-->
+      <Node Name="Cluster" Bounds="281,160" Id="VvCLlpXQjuMND1fKFCtaJl" Summary="Simple class that describes a cluster tracked by the DBSCAN plugin" Tags="tracking,cluster">
+        <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="Builtin">
+          <Choice Kind="ClassDefinition" Name="Class" />
+        </p:NodeReference>
+        <Patch Id="Eb9L771hwmlLzjKrSLxnji">
+          <Canvas Id="F8b2SlQ3jW8Oh3Qn9Qvsi5" CanvasType="Group">
+            <Pad Id="HUrP4w0AYyIQaXXFPccHfl" SlotId="AqaBV85gIeUMBMvbUXolS8" Bounds="340,310,12,19" ShowValueBox="true">
+              <p:ValueBoxSettings />
+            </Pad>
+            <ControlPoint Id="Nw63zrSctWYNb2dJg3uys5" Bounds="339,271" />
+            <Pad Id="BZAtG921uzbLQ3gtrckwQo" SlotId="JhXNQ6C9udSNIXdivddxBR" Bounds="354,594">
+              <p:ValueBoxSettings />
+            </Pad>
+            <Node Bounds="340,345,95,85" Id="THAQTvbqi3mN117g9b3pfq">
+              <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:NodeReference>
+              <Pin Id="EpFDwiq7Lx6QAUmmgaKxsw" Name="Break" Kind="OutputPin" />
+              <Patch Id="FNGXERkVzShNuMy6PjYnhX" ManuallySortedPins="true">
+                <Patch Id="RRIrKilbaCxQQEROpoCi7x" Name="Create" ManuallySortedPins="true" />
+                <Patch Id="QvIqpamcpuCPqoOxxxaljy" Name="Update" ManuallySortedPins="true" />
+                <Patch Id="UDTLKS7lG1NLSzbclq7xGp" Name="Dispose" ManuallySortedPins="true" />
+                <Node Bounds="363,380,39,13" Id="RtkRngz7h6fMInUFG30zB4">
+                  <p:NodeReference LastCategoryFullName="2D.Vector2" LastSymbolSource="CoreLibBasics.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="OperationCallFlag" Name="Vector (Split)" />
+                    <CategoryReference Kind="Vector2Type" Name="Vector2" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="FXlpBTqbcfoPPdzWKqGIpM" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="DuRMZJFwm0iNwPI0Nbmcih" Name="X" Kind="OutputPin" />
+                  <Pin Id="FWZ8OSygGLlPgzkJrHQ5bu" Name="Y" Kind="OutputPin" />
+                </Node>
+              </Patch>
+              <ControlPoint Id="Qo2PzTAJ45JPP225JjzIIn" Bounds="365,351" Alignment="Top" />
+              <ControlPoint Id="I0c2acIudHPQW9K87VTeIk" Bounds="355,424" Name="X" Alignment="Bottom" />
+              <ControlPoint Id="A9OE0MgU8OWL9dTRthsOru" Bounds="410,424" Name="Y" Alignment="Bottom" />
+            </Node>
+            <Node Bounds="307,475,42,13" Id="QqMst40ejE6Oa0kZE64kOl">
+              <p:NodeReference LastCategoryFullName="Collections.Sequence" LastSymbolSource="VL.Collections.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="Min" />
+                <FullNameCategoryReference ID="Collections.Sequence" />
+              </p:NodeReference>
+              <Pin Id="HMw9lamdnwTO8irl1k0dWn" Name="Input" Kind="StateInputPin" />
+              <Pin Id="CHTAj7SvS1nQTeIndUcMAT" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="408,474,42,13" Id="FTey69szh0oL9ouQSBEtyI">
+              <p:NodeReference LastCategoryFullName="Collections.Sequence" LastSymbolSource="VL.Collections.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="Min" />
+                <FullNameCategoryReference ID="Collections.Sequence" />
+              </p:NodeReference>
+              <Pin Id="SgfvjNCLNXYMWztAU5MCZs" Name="Input" Kind="StateInputPin" />
+              <Pin Id="DsLSqWBJypMLxAdbC2R96k" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="352,474,45,13" Id="Msunrp0eXOYPWpXXm94cja">
+              <p:NodeReference LastCategoryFullName="Collections.Sequence" LastSymbolSource="VL.Collections.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="Max" />
+                <FullNameCategoryReference ID="Collections.Sequence" />
+              </p:NodeReference>
+              <Pin Id="C5j6s2MAl4pQbH9FLTC7Cw" Name="Input" Kind="StateInputPin" />
+              <Pin Id="MqalHdQ1GAwOJ3ljycm2Ul" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="453,474,45,13" Id="IrhpRHAtzAKNpnSkvufdqA">
+              <p:NodeReference LastCategoryFullName="Collections.Sequence" LastSymbolSource="VL.Collections.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="Max" />
+                <FullNameCategoryReference ID="Collections.Sequence" />
+              </p:NodeReference>
+              <Pin Id="LN8SF8dg7LjP2OolK2zGp1" Name="Input" Kind="StateInputPin" />
+              <Pin Id="V5InEU72ckfNp3crkQlgBD" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="352,534,65,13" Id="IyUQXa6dtmgPrUXVuKdnlM">
+              <p:NodeReference LastCategoryFullName="2D.Rectangle" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="Rectangle (Join Edges)" />
+              </p:NodeReference>
+              <Pin Id="VxZxnjSb7qHOz5wp7zj1fh" Name="Left" Kind="InputPin" />
+              <Pin Id="HPHTMHChdEeLV15U8nzMuR" Name="Right" Kind="InputPin" />
+              <Pin Id="HfnY5rZczk3LJqSmCYg3LB" Name="Top" Kind="InputPin" />
+              <Pin Id="GcWcjxtAlyvNHcuEpLud6d" Name="Bottom" Kind="InputPin" />
+              <Pin Id="SEHuxBeESyHOCqOmxsyuCo" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pad Id="ABf4CCoi4HCOMH9Cg6wYQW" SlotId="AqaBV85gIeUMBMvbUXolS8" Bounds="568,404">
+              <p:ValueBoxSettings />
+            </Pad>
+            <Pad Id="DMExiwjslcfNY4HdUXxo45" SlotId="JhXNQ6C9udSNIXdivddxBR" Bounds="652,404">
+              <p:ValueBoxSettings />
+            </Pad>
+            <ControlPoint Id="POAIUa1PPrROxBmL87pFyd" Bounds="567,434" />
+            <ControlPoint Id="GK1eoTVTsVkLxKWNV6ycOh" Bounds="651,434" />
+          </Canvas>
+          <Patch Id="LIrPCXIYKNTPE5a6DVQaxR" Name="Create" ParticipatingElements="QqMst40ejE6Oa0kZE64kOl,FTey69szh0oL9ouQSBEtyI,Msunrp0eXOYPWpXXm94cja,IrhpRHAtzAKNpnSkvufdqA,IyUQXa6dtmgPrUXVuKdnlM">
+            <Pin Id="L3Txd0Tdz5hOoPr0qYRZuz" Name="Points" Kind="InputPin" Bounds="344,286" />
+          </Patch>
+          <ProcessDefinition Id="QYbdmofNvdEO7yx5La0qed" IsHidden="true">
+            <Fragment Id="VSq9aY8As08PSyqpgsCzoV" Patch="LIrPCXIYKNTPE5a6DVQaxR" Enabled="true" />
+            <Fragment Id="LXE0IiHgrq7P7mtvg6qtlB" Patch="NMjOJhnKk7tM3hEElXsXrA" Enabled="true" />
+          </ProcessDefinition>
+          <Slot Id="AqaBV85gIeUMBMvbUXolS8" Name="Points" Summary="The 2D points contained in the cluster">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="Spread" />
+              <p:TypeArguments>
+                <TypeReference>
+                  <Choice Kind="TypeFlag" Name="Vector2" />
+                </TypeReference>
+              </p:TypeArguments>
+            </p:TypeAnnotation>
+          </Slot>
+          <Link Id="Q813NsCvHV1OUQdhiFlGbt" Ids="Nw63zrSctWYNb2dJg3uys5,HUrP4w0AYyIQaXXFPccHfl" />
+          <Link Id="U2JtBSG7XP7PmW9SuhPNyG" Ids="L3Txd0Tdz5hOoPr0qYRZuz,Nw63zrSctWYNb2dJg3uys5" IsHidden="true" />
+          <Slot Id="JhXNQ6C9udSNIXdivddxBR" Name="Rectangle" Summary="The bounding rectangle of the cluster">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="Rectangle" />
+            </p:TypeAnnotation>
+          </Slot>
+          <Link Id="PkvgHGCOYuYLFwqGkZ62gw" Ids="HUrP4w0AYyIQaXXFPccHfl,Qo2PzTAJ45JPP225JjzIIn" />
+          <Link Id="Rhw9M5QDSwSPlThuCWxA0g" Ids="Qo2PzTAJ45JPP225JjzIIn,FXlpBTqbcfoPPdzWKqGIpM" />
+          <Link Id="BjIQsrBoHoNNIYIux2FjNC" Ids="DuRMZJFwm0iNwPI0Nbmcih,I0c2acIudHPQW9K87VTeIk" />
+          <Link Id="KmTCwy1OkEnNME8krbtr27" Ids="FWZ8OSygGLlPgzkJrHQ5bu,A9OE0MgU8OWL9dTRthsOru" />
+          <Link Id="Tp7fIbuWJswNEU6UjhkmOb" Ids="A9OE0MgU8OWL9dTRthsOru,SgfvjNCLNXYMWztAU5MCZs" />
+          <Link Id="GX6B4LpjE4JNYE24O0wF5V" Ids="I0c2acIudHPQW9K87VTeIk,HMw9lamdnwTO8irl1k0dWn" />
+          <Link Id="RJsbXBJ7SI3Ln0QTSyXXjw" Ids="I0c2acIudHPQW9K87VTeIk,C5j6s2MAl4pQbH9FLTC7Cw" />
+          <Link Id="IOwtEBEgj6RO0RnCSwddsQ" Ids="A9OE0MgU8OWL9dTRthsOru,LN8SF8dg7LjP2OolK2zGp1" />
+          <Link Id="QORCRxFAWfCONmlo9LpN01" Ids="CHTAj7SvS1nQTeIndUcMAT,VxZxnjSb7qHOz5wp7zj1fh" />
+          <Link Id="KWu2hLsr5EfNMyWcUG4Sxb" Ids="MqalHdQ1GAwOJ3ljycm2Ul,HPHTMHChdEeLV15U8nzMuR" />
+          <Link Id="Q8qn2fTzUypL2uVkJanREt" Ids="DsLSqWBJypMLxAdbC2R96k,HfnY5rZczk3LJqSmCYg3LB" />
+          <Link Id="R4IJus5idslO24MKFqLYQq" Ids="V5InEU72ckfNp3crkQlgBD,GcWcjxtAlyvNHcuEpLud6d" />
+          <Link Id="N5MX4wI9ondOIxb3sIuN8D" Ids="SEHuxBeESyHOCqOmxsyuCo,BZAtG921uzbLQ3gtrckwQo" />
+          <Link Id="DkNv3w0sPYWLcEP0SPP7df" Ids="ABf4CCoi4HCOMH9Cg6wYQW,POAIUa1PPrROxBmL87pFyd" />
+          <Link Id="PRHdqHB3iBONrRnayPJ4L5" Ids="POAIUa1PPrROxBmL87pFyd,UQMg1gaEOiULfWE407OtCv" IsHidden="true" />
+          <Link Id="DeJbxJFOHbfNlPoH6jJ2kQ" Ids="DMExiwjslcfNY4HdUXxo45,GK1eoTVTsVkLxKWNV6ycOh" />
+          <Link Id="L2d3JwFhojpOnKs5mv3QK4" Ids="GK1eoTVTsVkLxKWNV6ycOh,EZCUIydfwD0OUM17q0TXG9" IsHidden="true" />
+          <Patch Id="NMjOJhnKk7tM3hEElXsXrA" Name="Split">
+            <Pin Id="UQMg1gaEOiULfWE407OtCv" Name="Points" Kind="OutputPin" />
+            <Pin Id="EZCUIydfwD0OUM17q0TXG9" Name="Rectangle" Kind="OutputPin" />
+          </Patch>
+        </Patch>
+      </Node>
+    </Canvas>
+  </Patch>
+  <PlatformDependency Id="DApW1WqgJhAPgu7u7pUM2i" Location="D:/Documents/vvvv/VL/VL.DBSCAN/vl/lib/DBSCAN.dll" />
+  <PlatformDependency Id="GYRUUxRzFotLoTS7j5w50U" Location="./lib/DBSCAN.Utils.dll" />
+</Document>
