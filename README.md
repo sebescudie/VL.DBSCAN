@@ -1,14 +1,14 @@
 # VL.DBSCAN
 
-_A simple implementation of [viceroypenguin's DBSCAN .NET lib](https://github.com/viceroypenguin/DBSCAN)._
+_A simple implementation of [viceroypenguin's DBSCAN .NET lib](https://github.com/viceroypenguin/DBSCAN) in VVVV Gamma._
 
 ## Usage
 
-Go to VL's command line and type
+Go to gamma's command line and type
 
 > nuget install VL.DBSCAN
 
-Testes with vvvv-gamma 222
+Tested with vvvv-gamma preview 222. This repo contains an example VL doc in the `examples` folder.
 
 ## Notes
 
