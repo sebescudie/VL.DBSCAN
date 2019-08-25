@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>VL.DBSCAN</id>
+    <version>1.2.0</version>
+    <authors>viceroypenguin, sebescudie</authors>
+    <owners>sebescudie</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>http://www.gnu.org/licenses/</licenseUrl>
+    <projectUrl>https://github.com/sebescudie/VL.DBSCAN</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/sebescudie/VL.DBSCAN/master/resources/nuget_icon.png</iconUrl>
+    <description>VL implementation of viceroypenguin's DBSCAN .net library</description>
+    <summary>VL implementation of viceroypenguin's DBSCAN .net library</summary>
+    <releaseNotes>Updated path to lib in example patch</releaseNotes>
+    <language>en-US</language>
+    <tags>vl dbscan cluster density tracking</tags>
+    <dependencies>
+      <dependency id="DBSCAN" version="2.0.12" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\*.vl" target="" exclude="" />
+    <file src="..\**\*.vl" target="" exclude="" />
+    <file src="..\lib\netstandard2.0\DBSCAN.Utils.dll" target="..\lib\netstandard2.0" exclude="" />
+  </files>
+</package>
