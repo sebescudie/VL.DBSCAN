@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>VL.DBSCAN</id>
-    <version>$version$</version>
+    <version>1.2.0</version>
     <authors>viceroypenguin, sebescudie</authors>
     <owners>sebescudie</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -19,8 +19,8 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="..\*.vl" target="" exclude="" />
-    <file src="..\**\*.vl" target="" exclude="" />
-    <file src="..\lib\netstandard2.0\DBSCAN.Utils.dll" target="..\lib\netstandard2.0" exclude="" />
+    <file src="..\*.vl"/>
+    <file src="..\**\*.vl"/>
+    <file src="..\lib\netstandard2.0\DBSCAN.Utils.dll" target="..\lib\netstandard2.0"/>
   </files>
 </package>
