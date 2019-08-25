@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.4</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <LangVersion>7.2</LangVersion>
     <Configurations>Debug;Release;VL</Configurations>
   </PropertyGroup>
@@ -11,9 +11,13 @@
     <DocumentationFile>D:\Documents\vvvv\VL\VL.DBSCAN\vs\DBSCAN.Utils\DBSCAN.Utils.xml</DocumentationFile>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>D:\vvvv\repos\VL.DBSCAN\lib\</OutputPath>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="DBSCAN" Version="2.0.12" />
-    <PackageReference Include="SharpDX.Mathematics" Version="4.2.0" />
+    <PackageReference Include="Xenko.Core.Mathematics" Version="3.1.0.1-beta02-0674" />
   </ItemGroup>
 
 </Project>
