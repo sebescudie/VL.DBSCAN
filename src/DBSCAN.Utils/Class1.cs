@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Numerics;
-using SharpDX;
+using Xenko.Core.Mathematics;
 
 namespace DBSCAN.Utils
 {
@@ -14,7 +14,7 @@ namespace DBSCAN.Utils
         /// Creates a TrackablePoint from a Vector2 to be used with VL DBSCAN plugin
         /// </summary>
         /// <param name="vector"></param>
-        public TrackablePoint(SharpDX.Vector2 vector) =>
+        public TrackablePoint(Vector2 vector) =>
             _point = new Point(vector.X, vector.Y);
 
         /// <summary>
@@ -27,9 +27,9 @@ namespace DBSCAN.Utils
         /// </summary>
         /// <param name="point"></param>
         /// <returns></returns>
-        public static SharpDX.Vector2 ToVector2(TrackablePoint point)
+        public static Vector2 ToVector2(TrackablePoint point)
         {
-            return new SharpDX.Vector2((float)point._point.X, (float)point._point.Y);
+            return new Vector2((float)point._point.X, (float)point._point.Y);
         }
     }
 }
