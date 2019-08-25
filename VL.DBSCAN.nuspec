@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>VL.DBSCAN</id>
-    <version>1.2.1</version>
+    <version>1.2.2</version>
     <authors>viceroypenguin, sebescudie</authors>
     <owners>sebescudie</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
