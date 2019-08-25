@@ -11,7 +11,7 @@
     <iconUrl>https://raw.githubusercontent.com/sebescudie/VL.DBSCAN/master/resources/nuget_icon.png</iconUrl>
     <description>VL implementation of viceroypenguin's DBSCAN .net library</description>
     <summary>VL implementation of viceroypenguin's DBSCAN .net library</summary>
-    <releaseNotes>Updated path to lib in example patch</releaseNotes>
+    <releaseNotes>Switch to Xenko Mathematics</releaseNotes>
     <language>en-US</language>
     <tags>vl dbscan cluster density tracking</tags>
     <dependencies>
