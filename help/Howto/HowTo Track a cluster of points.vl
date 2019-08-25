@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="GB2VxUl5VdhM5rsl5IbjQg" LanguageVersion="2019.1.0-0222-gc2a787e891" Version="0.128">
+<Document xmlns:p="property" Id="GB2VxUl5VdhM5rsl5IbjQg" LanguageVersion="2019.1.0-0618-g6e4914d739" Version="0.128">
   <NugetDependency Id="RKFCmk1Lg5EP3I4IQegLTw" Location="VL.CoreLib" Version="0.35.21" />
   <NugetDependency Id="U2JwHqMJLyGLDs97lM6eZ6" Location="VL.CoreLib.VVVV" Version="0.35.21" />
   <Patch Id="Th8hpfHvBF4Lk6VOwDCc9D">
@@ -18,7 +18,7 @@
             <Node Bounds="497,379,71,13" Id="EYJCoxJbohZL8x8pe60pPl">
               <p:NodeReference LastCategoryFullName="Graphics.Skia.Layers" LastSymbolSource="VL.Skia.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                <Choice Kind="ProcessAppFlag" Name="Rectangle" />
+                <Choice Kind="ProcessNode" Name="Rectangle (Bounds)" />
               </p:NodeReference>
               <Pin Id="VwVeKwidnDyLUfg1wpUBsH" Name="Bounds" Kind="InputPin" />
               <Pin Id="GuoCiCXzvvNQdHEUzA2CYc" Name="Paint" Kind="InputPin" />
@@ -41,7 +41,7 @@
             <Node Bounds="680,379,65,13" Id="BOWUbIRzUHRNxQR42ZxFQL">
               <p:NodeReference LastCategoryFullName="Graphics.Skia.Layers.Text" LastSymbolSource="VL.Skia.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                <Choice Kind="ProcessAppFlag" Name="Text" />
+                <Choice Kind="ProcessNode" Name="Text (Bounds)" />
               </p:NodeReference>
               <Pin Id="Osjn56RZOVtMViNCgcn6I9" Name="Bounds" Kind="InputPin" />
               <Pin Id="C49BlmzC9E2NQpUs45Ds54" Name="Text" Kind="InputPin" />
@@ -169,6 +169,7 @@
             <Pin Id="K2JHM4AIarvLxOrdX4jrEE" Name="Enabled" Kind="InputPin" />
             <Pin Id="GUcEhjqh8UCL3gQgg8YiG6" Name="Form" Kind="OutputPin" />
             <Pin Id="CXn4zR8xJ7BMYXuCDU4YVE" Name="ClientBounds" Kind="OutputPin" />
+            <Pin Id="TLQiMpaAnlyMaPk3sL3vW7" Name="Render Time" Kind="OutputPin" />
           </Node>
           <Node Bounds="613,896,37,13" Id="DRVc2V9l9kUMHrWLm0dRG2">
             <p:NodeReference LastCategoryFullName="Graphics.Skia" LastSymbolSource="VL.Skia.vl">
@@ -300,7 +301,7 @@
                   <Patch Id="CX2Dsj6y4AxNaRkfmFzXjP" Name="Update" ManuallySortedPins="true" />
                   <Patch Id="Ric59fXg2hbNRjjtxLU0lJ" Name="Dispose" ManuallySortedPins="true" />
                   <Node Bounds="766,645,104,19" Id="S0uvhWr63jKM1Op1gTE7ka">
-                    <p:NodeReference LastCategoryFullName="VVVV.DBSCAN" LastSymbolSource="01_Basic-Demo.vl">
+                    <p:NodeReference LastCategoryFullName="VVVV.DBSCAN" LastSymbolSource="HowTo Track a cluster of points.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <Choice Kind="ProcessAppFlag" Name="DrawClusterData" />
                     </p:NodeReference>
@@ -365,5 +366,5 @@
     </Node>
   </Patch>
   <NugetDependency Id="QtqQUt6r7sJNKYBuxDce1f" Location="VL.Skia" Version="0.94.30-g7af1280a81" />
-  <DocumentDependency Id="OeCWmjk6nlmMVp3RofK9kQ" Location="../vl/VL.DBSCAN.vl" />
+  <DocumentDependency Id="AB15I6w19PXLMl3yBTHzr1" Location="../../VL.DBSCAN.vl" />
 </Document>
