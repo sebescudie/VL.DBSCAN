@@ -17,7 +17,7 @@
 
   <ItemGroup>
     <PackageReference Include="DBSCAN" Version="2.0.12" />
-    <PackageReference Include="Xenko.Core.Mathematics" Version="3.1.0.1-beta02-0674" />
+    <PackageReference Include="Stride.Core.Mathematics" Version="4.0.0.1-beta04-1265" />
   </ItemGroup>
 
 </Project>

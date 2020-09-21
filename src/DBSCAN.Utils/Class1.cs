@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Numerics;
-using Xenko.Core.Mathematics;
+using Stride.Core.Mathematics;
 
 namespace DBSCAN.Utils
 {
