@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>VL.DBSCAN</id>
-    <version>1.2.2</version>
+    <version>1.2.3</version>
     <authors>viceroypenguin, sebescudie</authors>
     <owners>sebescudie</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -11,7 +11,7 @@
     <iconUrl>https://raw.githubusercontent.com/sebescudie/VL.DBSCAN/master/resources/nuget_icon.png</iconUrl>
     <description>VL implementation of viceroypenguin's DBSCAN .net library</description>
     <summary>VL implementation of viceroypenguin's DBSCAN .net library</summary>
-    <releaseNotes>Switch to Xenko Mathematics</releaseNotes>
+    <releaseNotes>Switch to Stride mathematics</releaseNotes>
     <language>en-US</language>
     <tags>vl dbscan cluster density tracking</tags>
     <dependencies>
