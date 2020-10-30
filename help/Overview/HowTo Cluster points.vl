@@ -241,7 +241,7 @@
               </Patch>
             </Node>
             <Node Bounds="761,289,70,19" Id="U5wVgv694IfMeygp7FpcVm">
-              <p:NodeReference LastCategoryFullName="VVVV.DBSCAN.DrawClusterData" LastSymbolSource="HowTo Track a cluster of points.vl">
+              <p:NodeReference LastCategoryFullName="VVVV.DBSCAN.DrawClusterData" LastSymbolSource="HowTo Cluster points.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="FormatVec2" />
               </p:NodeReference>
@@ -320,7 +320,7 @@
         <Patch Id="ESJZDDS0I02LAWDOx9RJVV" Name="Create" />
         <Patch Id="OkqGvJfa3PDOppp4PFQghD" Name="Update" />
         <Canvas Id="C4yd3S6BFv9NWqJ2WO3OFi" CanvasType="Group">
-          <Node Bounds="170,888,145,19" Id="OSa96mSfVnYMNb7jqIlo0W">
+          <Node Bounds="150,886,165,19" Id="OSa96mSfVnYMNb7jqIlo0W">
             <p:NodeReference LastCategoryFullName="Graphics.Skia" LastSymbolSource="VL.Skia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
@@ -328,6 +328,11 @@
             <Pin Id="KjjcBAoZAR0NKOPRkOrQmD" Name="Bounds" Kind="InputPin" DefaultValue="1134, 234, 600, 400">
               <p:TypeAnnotation LastCategoryFullName="System.Windows" LastSymbolSource="VL.CoreLib.Windows.vl">
                 <Choice Kind="TypeFlag" Name="Rectangle" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="MnIEqBB725PLTl3TDKskcF" Name="Bound to Document" Kind="InputPin" DefaultValue="True">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Boolean" />
               </p:TypeAnnotation>
             </Pin>
             <Pin Id="QyQzUrwjyzZP29V6xKaCsn" Name="Input" Kind="InputPin" />
@@ -469,12 +474,14 @@
                   <CategoryReference Kind="Category" Name="Primitive" />
                 </p:NodeReference>
                 <Pin Id="REFqf7bJBjHNgtRWRa13ir" Name="Break" Kind="OutputPin" />
+                <ControlPoint Id="HKEej7cEbUILvEWriLb568" Bounds="360,604" Alignment="Top" />
+                <ControlPoint Id="AcGwAzaEXLaP7oqODVBLQW" Bounds="360,664" Alignment="Bottom" />
                 <Patch Id="JosvMnZkMlYPtPo6KXWNqT" ManuallySortedPins="true">
                   <Patch Id="P3jS4ocQW8tPb1DQZ9qnKX" Name="Create" ManuallySortedPins="true" />
                   <Patch Id="CX2Dsj6y4AxNaRkfmFzXjP" Name="Update" ManuallySortedPins="true" />
                   <Patch Id="Ric59fXg2hbNRjjtxLU0lJ" Name="Dispose" ManuallySortedPins="true" />
                   <Node Bounds="364,625,31,19" Id="S0uvhWr63jKM1Op1gTE7ka">
-                    <p:NodeReference LastCategoryFullName="VVVV.DBSCAN" LastSymbolSource="HowTo Track a cluster of points.vl">
+                    <p:NodeReference LastCategoryFullName="VVVV.DBSCAN" LastSymbolSource="HowTo Cluster points.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <Choice Kind="ProcessAppFlag" Name="DrawClusterData" />
                     </p:NodeReference>
@@ -482,8 +489,6 @@
                     <Pin Id="KNzJKTRw0VwMwq7mHAT0eA" Name="Output" Kind="OutputPin" />
                   </Node>
                 </Patch>
-                <ControlPoint Id="HKEej7cEbUILvEWriLb568" Bounds="360,604" Alignment="Top" />
-                <ControlPoint Id="AcGwAzaEXLaP7oqODVBLQW" Bounds="360,664" Alignment="Bottom" />
               </Node>
               <Pad Id="FUzF95zATVTNAIIinPgy5L" Comment="Minimum Points Per Cluster" Bounds="450,542,20,15" ShowValueBox="true" isIOBox="true" Value="4">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">

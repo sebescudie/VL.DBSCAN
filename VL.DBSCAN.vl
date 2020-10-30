@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="GB2VxUl5VdhM5rsl5IbjQg" LanguageVersion="2020.3.0.53" Version="0.128">
+<Document xmlns:p="property" Id="ChGdWH10TExPdPqkjFsi9M" LanguageVersion="2020.3.0.53" Version="0.128">
   <NugetDependency Id="RKFCmk1Lg5EP3I4IQegLTw" Location="VL.CoreLib" Version="2020.3.0-0053-gd338f20e7b" />
   <Patch Id="Th8hpfHvBF4Lk6VOwDCc9D">
     <Canvas Id="NtZT52Xp5qNOXK0fF2H7kv" DefaultCategory="2D" CanvasType="FullCategory">
@@ -375,4 +375,5 @@
     </Node>
   </Patch>
   <PlatformDependency Id="GYRUUxRzFotLoTS7j5w50U" Location="./lib/DBSCAN.Utils.dll" />
+  <NugetDependency Id="Javu8EEFtxkQDkHi9tmrok" Location="DBSCAN" Version="2.0.12" />
 </Document>
