@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="GB2VxUl5VdhM5rsl5IbjQg" LanguageVersion="2019.1.0-0222-gc2a787e891" Version="0.128">
-  <NugetDependency Id="RKFCmk1Lg5EP3I4IQegLTw" Location="VL.CoreLib" Version="0.35.21" />
-  <NugetDependency Id="U2JwHqMJLyGLDs97lM6eZ6" Location="VL.CoreLib.VVVV" Version="0.35.21" />
+<Document xmlns:p="property" Id="GB2VxUl5VdhM5rsl5IbjQg" LanguageVersion="2020.3.0.53" Version="0.128">
+  <NugetDependency Id="RKFCmk1Lg5EP3I4IQegLTw" Location="VL.CoreLib" Version="2020.3.0-0053-gd338f20e7b" />
   <Patch Id="Th8hpfHvBF4Lk6VOwDCc9D">
     <Canvas Id="NtZT52Xp5qNOXK0fF2H7kv" DefaultCategory="2D" CanvasType="FullCategory">
       <!--
@@ -44,7 +43,7 @@
                   <Pin Id="EwXATw75LGHMhIGcbKgJ5K" Name="Result" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="460,294,98,80" Id="ALmSeNdAW2nLIGJcQpcL6D">
-                  <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                  <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
                     <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                     <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
                     <CategoryReference Kind="Category" Name="Primitive" />
@@ -95,12 +94,14 @@
                 </Node>
                 <Link Id="RphFJyzV5aSNfpKkQxf9jw" Ids="EwXATw75LGHMhIGcbKgJ5K,EXYRNmAJBWxNGIwPSPk7zv" />
                 <Node Bounds="512,546,158,229" Id="L07TpTI8SIVLHJ6EXvc922">
-                  <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                  <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
                     <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                     <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
                     <CategoryReference Kind="Category" Name="Primitive" />
                   </p:NodeReference>
                   <Pin Id="TB4OTsiwybPM7tvDdCilmn" Name="Break" Kind="OutputPin" />
+                  <ControlPoint Id="LyTH2IBEBJlP3il8Oi1xwE" Bounds="532,553" Name="Cluster" Alignment="Top" />
+                  <ControlPoint Id="KgDP9fs3Rp1NrxYHbd3TPq" Bounds="579,770" Alignment="Bottom" />
                   <Patch Id="Hv7A9BlSxO8PZUX7iuWBxB" ManuallySortedPins="true">
                     <Patch Id="DCpYeBL38AEMX7v1QHnJU5" Name="Create" ManuallySortedPins="true" />
                     <Patch Id="RSQy9m6fo3qMt3vrxmF3vI" Name="Update" ManuallySortedPins="true" />
@@ -115,7 +116,7 @@
                       <Pin Id="CKmkF2hYvsNNOEgDeIywrT" Name="Objects" Kind="OutputPin" />
                     </Node>
                     <Node Bounds="564,628,94,72" Id="MtyIDi7uwToMDFPc5fWtam">
-                      <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                      <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
                         <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                         <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
                         <CategoryReference Kind="Category" Name="Primitive" />
@@ -148,8 +149,6 @@
                       <Pin Id="B5W2excPCvxMFxtxYQE3J3" Name="Output" Kind="StateOutputPin" />
                     </Node>
                   </Patch>
-                  <ControlPoint Id="LyTH2IBEBJlP3il8Oi1xwE" Bounds="532,553" Name="Cluster" Alignment="Top" />
-                  <ControlPoint Id="KgDP9fs3Rp1NrxYHbd3TPq" Bounds="579,770" Alignment="Bottom" />
                 </Node>
                 <Link Id="U22DWLHI2KuO1RZQr6nOcf" Ids="JrODQDM90nMOtSSJLl2lFH,LyTH2IBEBJlP3il8Oi1xwE" />
                 <Link Id="CyOn3zxWXwHPhqMwneowOW" Ids="LyTH2IBEBJlP3il8Oi1xwE,CL5F7h7kQebNR3IxEe3XeU" />
@@ -225,15 +224,11 @@
         </p:NodeReference>
         <Patch Id="Eb9L771hwmlLzjKrSLxnji">
           <Canvas Id="F8b2SlQ3jW8Oh3Qn9Qvsi5" CanvasType="Group">
-            <Pad Id="HUrP4w0AYyIQaXXFPccHfl" SlotId="AqaBV85gIeUMBMvbUXolS8" Bounds="340,308,12,19" ShowValueBox="true">
-              <p:ValueBoxSettings />
-            </Pad>
+            <Pad Id="HUrP4w0AYyIQaXXFPccHfl" SlotId="AqaBV85gIeUMBMvbUXolS8" Bounds="340,308,12,19" ShowValueBox="true" />
             <ControlPoint Id="Nw63zrSctWYNb2dJg3uys5" Bounds="339,271" />
-            <Pad Id="BZAtG921uzbLQ3gtrckwQo" SlotId="JhXNQ6C9udSNIXdivddxBR" Bounds="354,594">
-              <p:ValueBoxSettings />
-            </Pad>
+            <Pad Id="BZAtG921uzbLQ3gtrckwQo" SlotId="JhXNQ6C9udSNIXdivddxBR" Bounds="354,594" />
             <Node Bounds="340,345,95,85" Id="THAQTvbqi3mN117g9b3pfq">
-              <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
                 <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                 <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
                 <CategoryReference Kind="Category" Name="Primitive" />
@@ -305,12 +300,8 @@
               <Pin Id="GcWcjxtAlyvNHcuEpLud6d" Name="Bottom" Kind="InputPin" />
               <Pin Id="SEHuxBeESyHOCqOmxsyuCo" Name="Result" Kind="OutputPin" />
             </Node>
-            <Pad Id="ABf4CCoi4HCOMH9Cg6wYQW" SlotId="AqaBV85gIeUMBMvbUXolS8" Bounds="568,404">
-              <p:ValueBoxSettings />
-            </Pad>
-            <Pad Id="DMExiwjslcfNY4HdUXxo45" SlotId="JhXNQ6C9udSNIXdivddxBR" Bounds="652,404">
-              <p:ValueBoxSettings />
-            </Pad>
+            <Pad Id="ABf4CCoi4HCOMH9Cg6wYQW" SlotId="AqaBV85gIeUMBMvbUXolS8" Bounds="568,404" />
+            <Pad Id="DMExiwjslcfNY4HdUXxo45" SlotId="JhXNQ6C9udSNIXdivddxBR" Bounds="652,404" />
             <ControlPoint Id="POAIUa1PPrROxBmL87pFyd" Bounds="567,434" />
             <ControlPoint Id="GK1eoTVTsVkLxKWNV6ycOh" Bounds="651,434" />
           </Canvas>
@@ -376,11 +367,6 @@
         <Canvas Id="M3iDSrjXyabPfrURZeSM1T" CanvasType="Group" />
         <Patch Id="OxdXUvKxRurOaNQMRfYNPG" Name="Create" />
         <Patch Id="Mfu0Y1wZMnQNdSsMK67xjs" Name="Update" />
-        <!--
-
-    ************************  ************************
-
--->
         <ProcessDefinition Id="V5R4fbmy0JWLhdtSjlPaK5">
           <Fragment Id="Mdjc3XMdJBvMwrCZFyStUt" Patch="OxdXUvKxRurOaNQMRfYNPG" Enabled="true" />
           <Fragment Id="O9zfhlExlUFPQHDqHaeW43" Patch="Mfu0Y1wZMnQNdSsMK67xjs" Enabled="true" />
@@ -389,5 +375,4 @@
     </Node>
   </Patch>
   <PlatformDependency Id="GYRUUxRzFotLoTS7j5w50U" Location="./lib/DBSCAN.Utils.dll" />
-  <NugetDependency Id="OQhRBsvhXwjODXPl9UszUX" Location="DBSCAN" Version="2.0.12" />
 </Document>
