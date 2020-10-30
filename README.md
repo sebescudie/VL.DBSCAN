@@ -1,5 +1,7 @@
 # VL.DBSCAN
 
+[![Nuget](https://img.shields.io/nuget/v/VL.DBSCAN?style=flat-square)](https://www.nuget.org/packages/VL.DBSCAN)
+
 _A simple implementation of [viceroypenguin's DBSCAN .NET lib](https://github.com/viceroypenguin/DBSCAN) in VVVV Gamma._
 
 ## Usage
