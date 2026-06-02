@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="ImJAnUWAYiIQQY6vSdxw8W" Authors="sebescudie, antokhio" Credits="viceroypenguin" ProjectUrl="https://github.com/sebescudie/VL.DBSCAN" LanguageVersion="2025.7.0-0167-g0cfb068072" Version="0.128">
-  <NugetDependency Id="MK2RbZB9uqcOOIxCo1mLCd" Location="VL.CoreLib" Version="2025.7.0-0167-g0cfb068072" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="ImJAnUWAYiIQQY6vSdxw8W" Authors="sebescudie, antokhio" Credits="viceroypenguin" ProjectUrl="https://github.com/sebescudie/VL.DBSCAN" LanguageVersion="2025.7.2" Version="0.128">
+  <NugetDependency Id="MK2RbZB9uqcOOIxCo1mLCd" Location="VL.CoreLib" Version="2025.7.2" />
   <Patch Id="ObOkiHKJlj7QbLawvBhN76">
     <Canvas Id="T18fvKnXFWlNC0sNupCswX" DefaultCategory="2D" CanvasType="FullCategory">
       <!--
@@ -22,10 +22,10 @@
           <Canvas Id="D5UHTUeNdGhLoaIV8VpExr" CanvasType="Group">
             <!--
 
-    ************************ CalculateClusters ************************
+    ************************ CalculateClusters (Vector2) ************************
 
 -->
-            <Node Name="CalculateClusters" Bounds="56,400,460,468" Id="PxQYvy0OlBfNJJzirjTLox" Summary="Finds clusters in a spread of 2D vectors" Remarks="VL wrapper for viceroypenguin's DBSCAN library" Tags="tracking,cluster">
+            <Node Name="CalculateClusters (Vector2)" Bounds="56,400,460,468" Id="PxQYvy0OlBfNJJzirjTLox" Summary="Finds clusters in a spread of 2D vectors" Remarks="VL wrapper for viceroypenguin's DBSCAN library" Tags="tracking,cluster">
               <p:NodeReference>
                 <Choice Kind="OperationDefinition" />
               </p:NodeReference>
@@ -198,10 +198,10 @@
             </Node>
             <!--
 
-    ************************ CalculateClusters ************************
+    ************************ CalculateClusters (IPointData) ************************
 
 -->
-            <Node Name="CalculateClusters" Bounds="587,312,446,426" Id="G5EkFYktj0MNZxKljUcFr3" Summary="Finds clusters in a spread of IPointData objects" Remarks="VL wrapper for viceroypenguin's DBSCAN library" Tags="tracking,cluster">
+            <Node Name="CalculateClusters (IPointData)" Bounds="587,312,446,426" Id="G5EkFYktj0MNZxKljUcFr3" Summary="Finds clusters in a spread of IPointData objects" Remarks="VL wrapper for viceroypenguin's DBSCAN library" Tags="tracking,cluster">
               <p:NodeReference>
                 <Choice Kind="OperationDefinition" />
               </p:NodeReference>
