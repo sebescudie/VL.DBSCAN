@@ -21,7 +21,7 @@ jobs:
         uses: nuget/setup-nuget@v1
 
       - name: Publish VL Nuget
-        uses: vvvv/PublishVLNuget@1.0.43
+        uses: vvvv/PublishVLNuget@1.0.46
         with:
           csproj: src/VL.Dbscan.csproj
           nuspec: deployment/VL.DBSCAN.nuspec
