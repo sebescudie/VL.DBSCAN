@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="DeWpXdWzVzuO8soS2TAwSI" LanguageVersion="2025.7.0-0167-g0cfb068072" Version="0.128">
-  <NugetDependency Id="RKFCmk1Lg5EP3I4IQegLTw" Location="VL.CoreLib" Version="2025.7.0-0167-g0cfb068072" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="DeWpXdWzVzuO8soS2TAwSI" LanguageVersion="2025.7.2" Version="0.128">
+  <NugetDependency Id="RKFCmk1Lg5EP3I4IQegLTw" Location="VL.CoreLib" Version="2025.7.2" />
   <Patch Id="Th8hpfHvBF4Lk6VOwDCc9D">
     <Canvas Id="NtZT52Xp5qNOXK0fF2H7kv" DefaultCategory="VVVV.DBSCAN" CanvasType="FullCategory">
       <!--
@@ -23,6 +23,7 @@
               <Pin Id="VwVeKwidnDyLUfg1wpUBsH" Name="Bounds" Kind="InputPin" />
               <Pin Id="GuoCiCXzvvNQdHEUzA2CYc" Name="Paint" Kind="InputPin" />
               <Pin Id="THgadPZwAkgMDxqd5wYmfo" Name="Enabled" Kind="InputPin" />
+              <Pin Id="Iphl2YpS9BaPR3rJ5suGI5" Name="State Output" Kind="OutputPin" IsHidden="true" />
               <Pin Id="G8bPmkAUZMWNeszXsNQ3AO" Name="Output" Kind="OutputPin" />
             </Node>
             <Node Bounds="531,302,105,13" Id="SYxQY4gkdgzPsLQ0bYYZrC">
@@ -328,6 +329,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
+            <Pin Id="KdkddfzqEOYLOeuNLj1s7X" Name="Node Context" Kind="InputPin" IsHidden="true" />
             <Pin Id="KjjcBAoZAR0NKOPRkOrQmD" Name="Bounds" Kind="InputPin" DefaultValue="1591, 122, 600, 400">
               <p:TypeAnnotation LastCategoryFullName="System.Windows" LastDependency="VL.CoreLib.Windows.vl">
                 <Choice Kind="TypeFlag" Name="Rectangle" />
@@ -339,10 +341,12 @@
                 <Choice Kind="TypeFlag" Name="Boolean" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="KdkddfzqEOYLOeuNLj1s7X" Name="Node Context" Kind="InputPin" IsHidden="true" />
             <Pin Id="M98JwLvfnnnOK8sKWszLzB" Name="Dialog If Document Changed" Kind="InputPin" IsHidden="true" />
+            <Pin Id="R9M5hckAbmrMhmY5GJ00Pb" Name="Always On Top" Kind="InputPin" IsHidden="true" />
+            <Pin Id="C995WnOJx5CLyb8CB3HqgV" Name="Extend Into Title Bar" Kind="InputPin" IsHidden="true" />
             <Pin Id="QyQzUrwjyzZP29V6xKaCsn" Name="Input" Kind="InputPin" />
             <Pin Id="ACroyo8n0ixQHpl73TaHz6" Name="Title" Kind="InputPin" />
+            <Pin Id="GibEAe6AYlRLdwXAvTRCOk" Name="Title Bar Interaction Width" Kind="InputPin" IsHidden="true" />
             <Pin Id="CjJvXLRnXVWOS39tnMsJos" Name="Color" Kind="InputPin" />
             <Pin Id="Sd5Mwzn1xM0QIY2Nyg2eJy" Name="Clear" Kind="InputPin" />
             <Pin Id="GqLeUvHRwrVLdqod1jKXmh" Name="Space" Kind="InputPin" />
@@ -505,11 +509,11 @@
                 </p:TypeAnnotation>
               </Pad>
               <Node Bounds="358,557,95,19" Id="PuCcefRDB4bNzEb3qdlhIH">
-                <p:NodeReference LastCategoryFullName="2D.Dbscan" LastDependency="VL.Dbscan.vl" OverloadStrategy="AllPinsThatAreNotCommon">
+                <p:NodeReference LastCategoryFullName="2D.Dbscan" LastDependency="VL.DBSCAN.vl" OverloadStrategy="AllPinsThatAreNotCommon">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <CategoryReference Kind="Category" Name="2D" />
                   <CategoryReference Kind="ClassType" Name="Dbscan" />
-                  <Choice Kind="OperationCallFlag" Name="CalculateClusters" />
+                  <Choice Kind="OperationCallFlag" Name="CalculateClusters (Vector2)" />
                   <PinReference Kind="InputPin" Name="Input">
                     <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="Collections" LastDependency="VL.CoreLib.vl">
                       <Choice Kind="TypeFlag" Name="Spread" />
@@ -569,6 +573,6 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="QtqQUt6r7sJNKYBuxDce1f" Location="VL.Skia" Version="2025.7.0-0167-g0cfb068072" />
+  <NugetDependency Id="QtqQUt6r7sJNKYBuxDce1f" Location="VL.Skia" Version="2025.7.2" />
   <NugetDependency Id="CB4w73SI5G1LMuxrIoJ9MI" Location="VL.DBSCAN" Version="0.0.0.0" />
 </Document>
