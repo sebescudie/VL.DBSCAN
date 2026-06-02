@@ -20,7 +20,7 @@
   </metadata>
   <files>
     <file src="..\**\*.vl"/>
-    <file src="..\src\bin\Release\net8.0\*.dll" target="lib\net8.0" />
+    <file src="..\lib\*.dll" target="lib\net8.0" />
     <file src="icon.png" target=""/>
   </files>
 </package>
