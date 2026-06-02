@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="GB2VxUl5VdhM5rsl5IbjQg" LanguageVersion="2025.7.0-0167-g0cfb068072" Version="0.128">
-  <NugetDependency Id="RKFCmk1Lg5EP3I4IQegLTw" Location="VL.CoreLib" Version="2025.7.0-0167-g0cfb068072" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="GB2VxUl5VdhM5rsl5IbjQg" LanguageVersion="2025.7.2" Version="0.128">
+  <NugetDependency Id="RKFCmk1Lg5EP3I4IQegLTw" Location="VL.CoreLib" Version="2025.7.2" />
   <Patch Id="Th8hpfHvBF4Lk6VOwDCc9D">
     <Canvas Id="NtZT52Xp5qNOXK0fF2H7kv" DefaultCategory="VVVV.DBSCAN" CanvasType="FullCategory">
       <!--
@@ -23,6 +23,7 @@
               <Pin Id="VwVeKwidnDyLUfg1wpUBsH" Name="Bounds" Kind="InputPin" />
               <Pin Id="GuoCiCXzvvNQdHEUzA2CYc" Name="Paint" Kind="InputPin" />
               <Pin Id="THgadPZwAkgMDxqd5wYmfo" Name="Enabled" Kind="InputPin" />
+              <Pin Id="KZCVfRWURyHOFvl70G30l6" Name="State Output" Kind="OutputPin" IsHidden="true" />
               <Pin Id="G8bPmkAUZMWNeszXsNQ3AO" Name="Output" Kind="OutputPin" />
             </Node>
             <Node Bounds="531,302,105,19" Id="SYxQY4gkdgzPsLQ0bYYZrC">
@@ -345,10 +346,10 @@
               <Pin Id="GmJQMa5KFE1ONmFQMzHdM1" Name="Enabled" Kind="InputPin" />
               <Pin Id="CjAMKzHBDHHQT8K8Wwtyq9" Name="Output" Kind="OutputPin" />
             </Node>
-            <Node Bounds="347,200,46,26" Id="TB9WePzBxj8Ov6PJXtmQ9Z">
-              <p:NodeReference LastCategoryFullName="2D.Dbscan.ClusterT" LastDependency="VL.Dbscan.vl">
+            <Node Bounds="347,200,46,19" Id="TB9WePzBxj8Ov6PJXtmQ9Z">
+              <p:NodeReference LastCategoryFullName="2D.Dbscan.Cluster" LastDependency="VL.DBSCAN.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                <FullNameCategoryReference ID="2D.Dbscan.ClusterT" />
+                <CategoryReference Kind="RecordType" Name="Cluster" />
                 <Choice Kind="OperationCallFlag" Name="Split" />
               </p:NodeReference>
               <Pin Id="O5Hho4pDtKrLjw3H1UGotN" Name="Input" Kind="StateInputPin" />
@@ -369,8 +370,8 @@
           <Patch Id="EMBCPoRWibVLv3xC3Ae56x" Name="Create" />
           <Patch Id="Us7Ffl2zAcVQaijva1rURh" Name="Update">
             <Pin Id="DbmP7AHqMkCLXoxyTWUMog" Name="Input" Kind="InputPin" Bounds="477,136">
-              <p:TypeAnnotation LastCategoryFullName="2D.Dbscan" LastDependency="VL.Dbscan.vl">
-                <Choice Kind="TypeFlag" Name="ClusterT" />
+              <p:TypeAnnotation LastCategoryFullName="2D.Dbscan" LastDependency="VL.DBSCAN.vl">
+                <Choice Kind="TypeFlag" Name="Cluster" />
               </p:TypeAnnotation>
             </Pin>
             <Pin Id="MNb8VNq26gKMLTCEMlzoIS" Name="Output" Kind="OutputPin" Bounds="495,514" />
@@ -428,7 +429,8 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="KjjcBAoZAR0NKOPRkOrQmD" Name="Bounds" Kind="InputPin" DefaultValue="-2090, 248, 1278, 986">
+            <Pin Id="KdkddfzqEOYLOeuNLj1s7X" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="KjjcBAoZAR0NKOPRkOrQmD" Name="Bounds" Kind="InputPin" DefaultValue="641, 203, 1278, 986">
               <p:TypeAnnotation LastCategoryFullName="System.Windows" LastDependency="VL.CoreLib.Windows.vl">
                 <Choice Kind="TypeFlag" Name="Rectangle" />
               </p:TypeAnnotation>
@@ -439,10 +441,12 @@
                 <Choice Kind="TypeFlag" Name="Boolean" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="KdkddfzqEOYLOeuNLj1s7X" Name="Node Context" Kind="InputPin" IsHidden="true" />
             <Pin Id="M98JwLvfnnnOK8sKWszLzB" Name="Dialog If Document Changed" Kind="InputPin" IsHidden="true" />
+            <Pin Id="QnUZsXj40WbPgol52qk6ed" Name="Always On Top" Kind="InputPin" IsHidden="true" />
+            <Pin Id="VtbikTaUwtANjAUCoknj9P" Name="Extend Into Title Bar" Kind="InputPin" IsHidden="true" />
             <Pin Id="QyQzUrwjyzZP29V6xKaCsn" Name="Input" Kind="InputPin" />
             <Pin Id="ACroyo8n0ixQHpl73TaHz6" Name="Title" Kind="InputPin" />
+            <Pin Id="SxSNIkfoxPvPejA4oguY2H" Name="Title Bar Interaction Width" Kind="InputPin" IsHidden="true" />
             <Pin Id="CjJvXLRnXVWOS39tnMsJos" Name="Color" Kind="InputPin" />
             <Pin Id="Sd5Mwzn1xM0QIY2Nyg2eJy" Name="Clear" Kind="InputPin" />
             <Pin Id="GqLeUvHRwrVLdqod1jKXmh" Name="Space" Kind="InputPin" />
@@ -626,16 +630,14 @@
                 </Patch>
               </Node>
               <Node Bounds="200,661,95,19" Id="Ra6MU0OhtmLM4DtN74rm3g">
-                <p:NodeReference LastCategoryFullName="2D.Dbscan" LastDependency="VL.Dbscan.vl" OverloadStrategy="AllPinsThatAreNotCommon">
+                <p:NodeReference LastCategoryFullName="2D.Dbscan" LastDependency="VL.DBSCAN.vl" OverloadStrategy="AllPinsThatAreNotCommon">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                  <Choice Kind="OperationCallFlag" Name="CalculateClusters" />
+                  <Choice Kind="OperationCallFlag" Name="CalculateClusters (IPointData)" />
                   <PinReference Kind="InputPin" Name="Input">
                     <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="Collections" LastDependency="VL.CoreLib.vl">
                       <Choice Kind="TypeFlag" Name="Spread" />
                       <p:TypeArguments>
-                        <TypeReference LastCategoryFullName="2D.Dbscan" LastDependency="VL.Dbscan.vl">
-                          <Choice Kind="TypeFlag" Name="IPointData" />
-                        </TypeReference>
+                        <TypeParameterReference />
                       </p:TypeArguments>
                     </p:DataTypeReference>
                   </PinReference>
@@ -648,7 +650,7 @@
             </Patch>
             <ControlPoint Id="PkZCF5X6Q67P0yfh0AmNfs" Bounds="202,619" Alignment="Top" />
           </Node>
-          <Node Bounds="222,839,45,19" Id="VZfEWyEYBvkLFMdBBGYvVw">
+          <Node Bounds="222,860,45,19" Id="VZfEWyEYBvkLFMdBBGYvVw">
             <p:NodeReference LastCategoryFullName="Graphics.Skia" LastDependency="VL.Skia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Group (Spectral)" />
@@ -659,7 +661,7 @@
             <Pin Id="BZ24ZSHy7axNgS0nD6JYRo" Name="Enabled" Kind="InputPin" />
             <Pin Id="LcCVFg8rKMOMmqEuEoArWd" Name="Output" Kind="OutputPin" />
           </Node>
-          <Overlay Id="UiepbxIV0zsOfQ6T0q1UCn" Name="Calculate and display clusters" Bounds="101,531,437,353">
+          <Overlay Id="UiepbxIV0zsOfQ6T0q1UCn" Name="Calculate and display clusters" Bounds="101,531,437,363">
             <p:ColorIndex p:Type="Int32">0</p:ColorIndex>
           </Overlay>
           <!--
@@ -845,6 +847,6 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="QtqQUt6r7sJNKYBuxDce1f" Location="VL.Skia" Version="2025.7.0-0167-g0cfb068072" />
+  <NugetDependency Id="QtqQUt6r7sJNKYBuxDce1f" Location="VL.Skia" Version="2025.7.2" />
   <NugetDependency Id="CB4w73SI5G1LMuxrIoJ9MI" Location="VL.DBSCAN" Version="0.0.0.0" />
 </Document>
