@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dbscan" Version="3.0.0" />
+    <PackageReference Include="VL.Core" Version="2024.6.7" />
+  </ItemGroup>
+
+   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy &quot;$(OutDir)&quot; &quot;..\lib&quot; /h /i /c /k /e /r /y" />
+  </Target>
+
+</Project>

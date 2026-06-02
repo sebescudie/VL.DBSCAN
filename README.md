@@ -11,8 +11,9 @@ Go to gamma's quad menu/manage nugets/command-line and type
 ```
 nuget install VL.DBSCAN
 ```
+
 Open the help browser (<kbd>F1</kbd>) and look for DBSCAN, you'll find a simple help patch showing how to cluster points.
 
 ## Notes
 
-- The plugin uses `DBSCAN.Utils.dll` which just implements `IPointData` (required by the original lib) and allows to use VL's Vector2. This part had to be done in Visual Studio since `IPointData` uses the `ref` keyword that's not available in VL.
+- The plugin uses `VL.Dbscan.dll` which just implements `IPointData` (required by the original lib) and allows to use VL's Vector2. This part had to be done in Visual Studio since `IPointData` uses the `ref` keyword that's not available in VL.

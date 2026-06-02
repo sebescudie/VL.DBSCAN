@@ -2,8 +2,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>VL.DBSCAN</id>
-    <version>1.2.6</version>
-    <authors>viceroypenguin, sebescudie</authors>
+    <version>2.0.0</version>
+    <authors>viceroypenguin, sebescudie, antokhio</authors>
     <owners>sebescudie</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>http://www.gnu.org/licenses/</licenseUrl>
@@ -15,13 +15,12 @@
     <language>en-US</language>
     <tags>vl dbscan cluster density tracking</tags>
     <dependencies>
-      <dependency id="DBSCAN" version="2.0.12" />
+      <dependency id="DBSCAN" version="3.0.0" />
     </dependencies>
   </metadata>
   <files>
-    <file src="..\*.vl"/>
     <file src="..\**\*.vl"/>
+    <file src="..\lib\*.dll" target="lib\net8.0" />
     <file src="icon.png" target=""/>
-    <file src="..\src\DBSCAN.Utils\bin\Release\netstandard2.0\DBSCAN.Utils.dll" target="..\lib\netstandard2.0"/>
   </files>
 </package>
